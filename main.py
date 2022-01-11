@@ -23,7 +23,7 @@ class Memoria:
 
 memoria = Memoria()
 
-class willcareca(Thread):
+class thread(Thread):
   
   def __init__(self, nomeThread, memoria,  memoVirtualPosi, threadOp):
     Thread.__init__(self)
@@ -51,6 +51,6 @@ if __name__ == "__main__":
   print(memoFisica)
   for index in range(len(threadUmOp)):
     # mudar nome da thread
-    willcareca("Thread1", memoria, index, threadUmOp[index]).start()
+    thread("Thread1", memoria, index, threadUmOp[index]).start()
     # sleep(3)
-    willcareca("Thread2", memoria, index, threadDoisOp[index]).start()
+    thread("Thread2", memoria, index, threadDoisOp[index]).start()
